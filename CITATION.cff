@@ -1,0 +1,15 @@
+cff-version: 1.2.0
+title: "odata-to-mcp: OData to MCP: turn any OData V2 or V4 service, SAP Gateway included, into MCP tools for Claude & ChatGPT. Reads $metadata, no code."
+message: "If you use this software, please cite AnythingMCP, which it is built on."
+type: software
+authors:
+  - name: "helpcode.ai GmbH"
+repository-code: "https://github.com/HelpCode-ai/odata-to-mcp"
+url: "https://anythingmcp.com/guides/odata-to-mcp"
+license: AGPL-3.0-only
+references:
+  - type: software
+    title: "AnythingMCP"
+    authors:
+      - name: "helpcode.ai GmbH"
+    repository-code: "https://github.com/HelpCode-ai/anythingmcp"

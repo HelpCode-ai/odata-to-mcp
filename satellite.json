@@ -1,0 +1,34 @@
+{
+  "$comment": "Read by scripts/install.sh, scripts/smoke.mjs and the sync workflow. Generated; edit satellites.config.json in HelpCode-ai/anythingmcp instead.",
+  "repo": "odata-to-mcp",
+  "owner": "HelpCode-ai",
+  "mainRepo": "HelpCode-ai/anythingmcp",
+  "adapters": [],
+  "setup": {
+    "type": "odata",
+    "name": "Northwind (public OData demo)",
+    "baseUrl": "https://services.odata.org/V4/Northwind/Northwind.svc",
+    "config": {
+      "odata": {
+        "toolPrefix": "northwind"
+      }
+    }
+  },
+  "smokeCall": {
+    "tool": "northwind_query",
+    "args": {
+      "entity_set": "Orders",
+      "select": "OrderID,CustomerID,OrderDate,ShipCity",
+      "filter": "ShipCountry eq 'Germany'",
+      "orderby": "OrderDate desc",
+      "top": 10
+    }
+  },
+  "expectedTools": [
+    "northwind_list_services",
+    "northwind_describe_service",
+    "northwind_describe_entity",
+    "northwind_query",
+    "northwind_get_entity"
+  ]
+}
